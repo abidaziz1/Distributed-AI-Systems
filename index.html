@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0B1220">
+  <meta name="description" content="A guided, press-Next course on distributed AI systems: why one GPU is not enough, the hardware and the links between GPUs, data parallel and sharded training, splitting the math, and serving models at scale. Pictures, small calculators and questions to answer out loud. Almost no code.">
+  <title>Distributed AI Systems</title>
+  <link rel="icon" type="image/svg+xml" href="shared/assets/favicon.svg">
+  <link rel="stylesheet" href="shared/vendor/katex/katex.min.css">
+  <link rel="stylesheet" href="shared/css/app.css">
+  <link rel="stylesheet" href="css/course.css">
+</head>
+<body>
+  <div id="app">
+    <header class="top">
+      <div class="brand">
+        <span class="logo" aria-hidden="true">DA</span>
+        <span class="brand-t"><b>Distributed AI</b><small id="crumb"></small></span>
+      </div>
+      <div id="segs" class="segs" aria-label="Progress by chapter"></div>
+      <div class="stats">
+        <span class="stat"><b id="xp">0</b> XP<i id="xp-pop" class="xp-pop"></i></span>
+        <span class="stat lvl" id="lvl">Rookie</span>
+        <span class="stat left" id="left"></span>
+        <span class="fs"><button type="button" id="fs-down" aria-label="Smaller text">A-</button><button type="button" id="fs-up" aria-label="Larger text">A+</button></span>
+        <button type="button" id="menu-btn" class="btn-sm">Map</button>
+      </div>
+    </header>
+
+    <main class="main">
+      <aside class="coachcol" aria-label="Coach">
+        <div class="coach">
+          <div id="coach-photo" class="coach-photo"></div>
+          <div class="coach-name">Coach Sam<small>your distributed AI coach</small></div>
+        </div>
+        <div id="bubble" class="bubble" aria-live="polite"></div>
+        <div class="hintbox"><span id="hint"></span></div>
+      </aside>
+
+      <section class="stagecol" aria-label="Lesson">
+        <div class="stage-head">
+          <span id="seg-chip" class="seg-chip"></span>
+          <span id="tier-chip" class="tier-chip" style="display:none"></span>
+          <h1 id="stage-title"></h1>
+        </div>
+        <div id="stage-body" class="stage-body"></div>
+      </section>
+    </main>
+
+    <footer class="bar">
+      <button type="button" id="back" class="btn-back">Back</button>
+      <div class="pos" id="pos"></div>
+      <button type="button" id="next" class="btn-next"><span id="next-label">Next</span> <span aria-hidden="true">&rarr;</span></button>
+    </footer>
+  </div>
+  <div id="overlay" class="overlay"></div>
+  <noscript><p style="padding:2rem;font:20px sans-serif">This course needs JavaScript. Please enable it and reload.</p></noscript>
+
+  <script src="js/config.js"></script>
+  <script src="shared/js/util.js"></script>
+  <script src="js/helpers.js"></script>
+  <script src="shared/js/graph.js"></script>
+  <script src="js/graphs.js"></script>
+  <script src="shared/js/coach.js"></script>
+  <script src="shared/js/term.js"></script>
+  <script src="shared/js/render1.js"></script>
+  <script src="shared/js/render2.js"></script>
+  <script src="shared/vendor/katex/katex.min.js"></script>
+  <script src="js/widgets.js"></script>
+  <script src="shared/js/build.js"></script>
+  <script src="js/content/00-start.js"></script>
+  <script src="js/content/01-introduction.js"></script>
+  <script src="shared/js/app.js"></script>
+</body>
+</html>

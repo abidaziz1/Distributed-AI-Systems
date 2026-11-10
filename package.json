@@ -1,0 +1,14 @@
+{
+  "name": "distributed-ai-systems",
+  "private": true,
+  "description": "A guided, press-Next course on distributed AI systems. The site needs no build step. These scripts only check it.",
+  "scripts": {
+    "lint": "node dev/lint-content.js .",
+    "smoke": "node dev/smoke.js . --path deeper",
+    "smoke:phone": "node dev/smoke.js . --path deeper --width 390 --height 844",
+    "stats": "node dev/stats.js ."
+  },
+  "devDependencies": {
+    "playwright": "^1.63.0"
+  }
+}
